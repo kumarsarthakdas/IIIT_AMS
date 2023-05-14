@@ -57,7 +57,7 @@ const AssetDetails = () => {
         subject: "Request for borrowing asset: " + AssetDetails.title,
         message: "The department of " + user.name + " with email <" + user.email + "> has a request to borrow the asset " + AssetDetails.title + ". The quantity and time period of borrowing the items shall be discussed further.",
       };
-      const res = await axios.post("http://localhost:8080/api/v1/sendemail", emailData);
+      const res = await axios.post("https://iiit-ams.onrender.com/api/v1/sendemail", emailData);
       console.log("Email sent to " + AssetDetails.creator.name + " <" + AssetDetails.creator.email + "> from " + user.name + " <" + user.email + ">.");
       console.log(res.data);
     }
